@@ -272,7 +272,7 @@ def main():
             update_price()
 
         elif choice == "7":
-            print("\nThank you for using Stock Portfolio Tracker! 📈")
+            print("\nThank you for using Stock Portfolio Tracker!")
             break
 
         else:
