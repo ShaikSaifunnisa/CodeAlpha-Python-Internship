@@ -30,18 +30,18 @@ def buy_stock():
     stock = input("\nEnter stock name to BUY: ").upper()
 
     if stock not in stock_prices:
-        print("❌ Stock not found.")
+        print("Stock not found.")
         return
 
     try:
         quantity = int(input("Enter quantity: "))
 
         if quantity <= 0:
-            print("❌ Quantity must be greater than 0.")
+            print("Quantity must be greater than 0.")
             return
 
     except ValueError:
-        print("❌ Please enter a valid number.")
+        print("Please enter a valid number.")
         return
 
     price = stock_prices[stock]
@@ -67,7 +67,7 @@ def buy_stock():
         "price": price
     })
 
-    print("\n✅ BUY successful!")
+    print("\nBUY successful!")
     print(f"Stock: {stock}")
     print(f"Quantity: {quantity}")
     print(f"Price per share: ₹{price:,.2f}")
@@ -76,7 +76,7 @@ def buy_stock():
 
 def sell_stock():
     if not portfolio:
-        print("\n❌ Your portfolio is empty.")
+        print("\nYour portfolio is empty.")
         return
 
     show_portfolio()
@@ -84,24 +84,24 @@ def sell_stock():
     stock = input("\nEnter stock name to SELL: ").upper()
 
     if stock not in portfolio:
-        print("❌ You do not own this stock.")
+        print("You do not own this stock.")
         return
 
     try:
         quantity = int(input("Enter quantity to sell: "))
 
         if quantity <= 0:
-            print("❌ Quantity must be greater than 0.")
+            print("Quantity must be greater than 0.")
             return
 
     except ValueError:
-        print("❌ Please enter a valid number.")
+        print("Please enter a valid number.")
         return
 
     owned_quantity = portfolio[stock]["quantity"]
 
     if quantity > owned_quantity:
-        print(f"❌ You only own {owned_quantity} shares.")
+        print(f"You only own {owned_quantity} shares.")
         return
 
     current_price = stock_prices[stock]
@@ -127,7 +127,7 @@ def sell_stock():
         "price": current_price
     })
 
-    print("\n✅ SELL successful!")
+    print("\nSELL successful!")
     print(f"Stock: {stock}")
     print(f"Quantity sold: {quantity}")
     print(f"Sell value: ₹{sell_value:,.2f}")
@@ -214,23 +214,23 @@ def update_price():
     stock = input("\nEnter stock name to update: ").upper()
 
     if stock not in stock_prices:
-        print("❌ Stock not found.")
+        print("Stock not found.")
         return
 
     try:
         new_price = float(input("Enter new price: ₹"))
 
         if new_price <= 0:
-            print("❌ Price must be greater than 0.")
+            print("Price must be greater than 0.")
             return
 
     except ValueError:
-        print("❌ Please enter a valid price.")
+        print("Please enter a valid price.")
         return
 
     stock_prices[stock] = new_price
 
-    print("\n✅ Stock price updated!")
+    print("\nStock price updated!")
     print(f"{stock} = ₹{new_price:,.2f}")
 
 
@@ -276,7 +276,7 @@ def main():
             break
 
         else:
-            print("❌ Invalid choice. Please select 1-7.")
+            print("Invalid choice. Please select 1-7.")
 
 
 if __name__ == "__main__":
