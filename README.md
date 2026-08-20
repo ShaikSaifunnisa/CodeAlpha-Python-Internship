@@ -47,7 +47,7 @@ A Python program that extracts email addresses from a text file using regular ex
 
 **Input:** `Task-3-Email-Extractor/sample.txt`
 
-**Output:** `Task-3-Email-Extractor/extracted_emails.txt'
+Output: `Task-3-Email-Extractor/extracted_emails.txt`
 
 ## Technologies Used
 
