@@ -49,6 +49,20 @@ A Python program that extracts email addresses from a text file using regular ex
 
 Output: `Task-3-Email-Extractor/extracted_emails.txt`
 
+## Task 4 - Basic Chatbot
+
+A simple rule-based chatbot developed using Python.
+
+### Features:
+
+- Responds to common greetings
+- Responds to "how are you"
+- Provides its name when asked
+- Handles unknown inputs
+- Ends the conversation when the user types "bye"
+
+**File:** `Task-4-Basic-Chatbot/chatbot.py`
+
 ## Technologies Used
 
 - Python
